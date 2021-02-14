@@ -1,16 +1,17 @@
 var playerName = window.prompt("what is your robot's name?");
 var playerHealth = 100;
-var playerAttack = 12;
+var playerAttack = 10;
 var playerMoney = 10;
 
 // you can also log multiple at once like this
 console.log(playerName, playerAttack, playerHealth);
 
-var enemyName = "Roborto";
+var enemyNames = ["Roborto", "Any Androi", "Robo Trumble"];
 var enemyHealth = 50;
 var enemyAttack = 10;
 
-var fight = function() {
+var fight = function(enemyName) {
+    // fight function statements
     // Alert players that they are starrting the round
     window.alert("welcome to Robot Gladiators!");
 
@@ -67,5 +68,6 @@ if (promptFight === "fight" || promptFight === "FIGHT") {
   };
   
   // run fight function to start game
-  fight();
-  
+for (var i = 0; i <enemyNames.length; i++) {
+    fight(enemyNames[i]);
+}  
